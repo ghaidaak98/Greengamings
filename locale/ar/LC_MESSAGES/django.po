@@ -1,0 +1,888 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-08 11:46+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: games/templates/games/games_base.html:23 main/templates/main/base.html:22
+#: main/templates/main/base.html:138 main/templates/main/landing.html:34
+msgid "Green Gamings"
+msgstr "جرين جامينز"
+
+#: games/templates/games/guess_the_habitat/level_one.html:390
+#: games/templates/games/guess_the_habitat/level_three.html:391
+#: games/templates/games/guess_the_habitat/level_two.html:391
+msgid "Guess The Habitat"
+msgstr "خمن المواطن"
+
+#: games/templates/games/guess_the_habitat/level_one.html:392
+msgid "LEVEL ONE - match the Animals"
+msgstr "المستوى الأول - طابق الحيوانات"
+
+#: games/templates/games/guess_the_habitat/level_one.html:395
+#: games/templates/games/guess_the_habitat/level_three.html:396
+#: games/templates/games/guess_the_habitat/level_two.html:396
+msgid "start the game"
+msgstr "ابدأ اللعبة"
+
+#: games/templates/games/guess_the_habitat/level_one.html:406
+#: games/templates/games/guess_the_habitat/level_three.html:407
+#: games/templates/games/guess_the_habitat/level_two.html:407
+msgid "Move(s)"
+msgstr "الخطوات"
+
+#: games/templates/games/guess_the_habitat/level_one.html:468
+msgid "go to level two ?"
+msgstr "انتقل إلى المستوى الثاني؟"
+
+#: games/templates/games/guess_the_habitat/level_one.html:480
+msgid ""
+"Hello my fellow travelers! Are you ready for our adventure ride? We'll start "
+"this level by matching the animal to its identical friend to discover more "
+"about those fascinating creatures!"
+msgstr ""
+"أهلًا أصدقائي المغامرين! مستعدين لرحلتنا الشيقة ؟ حنبدأ هذا المستوى عن طريق "
+"مطابقة الحيوانات مع صديقه التوأم عشان نكتشف أكثر عن هذه المخلوقات المبهرة!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:481
+#, fuzzy
+#| msgid "go to level two ?"
+msgid "Go to level two"
+msgstr "انتقل إلى المستوى الثاني؟"
+
+#: games/templates/games/guess_the_habitat/level_one.html:482
+#: games/templates/games/guess_the_habitat/level_three.html:485
+#: games/templates/games/guess_the_habitat/level_two.html:481
+msgid "mins"
+msgstr "دقايق"
+
+#: games/templates/games/guess_the_habitat/level_one.html:483
+#: games/templates/games/guess_the_habitat/level_three.html:486
+#: games/templates/games/guess_the_habitat/level_two.html:482
+msgid "secs"
+msgstr "ثواني"
+
+#: games/templates/games/guess_the_habitat/level_one.html:484
+#: games/templates/games/guess_the_habitat/level_three.html:487
+#: games/templates/games/guess_the_habitat/level_two.html:483
+msgid "restart"
+msgstr "إعادة"
+
+#: games/templates/games/guess_the_habitat/level_one.html:487
+msgid ""
+"Did you know that camels can live up to 6 months without food or water? "
+"Because of the fat that's stored inside their humps. That's why they're "
+"called The Ship of the Desert!"
+msgstr ""
+"تعرفوا ان الجمل يعيش ٦ شهور بدون طعام أو ماء؟ عن طريق الدهون المخزنة في "
+"السنام. عشان كدة يسموه سفينة الصحراء!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:488
+msgid ""
+"Arabian Camels are herbivores, which means that they only feed on plants."
+msgstr "لجمل العربي حيوان جدًّا صحي! أكلهم المفضل هو النباتات!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:489
+msgid ""
+"Arabian Camels are very social and like to greet each other by blowing in "
+"each other's faces."
+msgstr "الجمل العربي حيوان جدًّا إجتماعي! عشان كدة دائمًا يعيشوا في مجموعات."
+
+#: games/templates/games/guess_the_habitat/level_one.html:490
+msgid ""
+"Arabian Camels have a third, clear eyelid that protects their eyes from "
+"blowing sand."
+msgstr "الجمل عنده جفن ثالث شفاف! عشان يحمي عينه من التراب."
+
+#: games/templates/games/guess_the_habitat/level_one.html:491
+msgid "Camels can eat thorny bushes because of their thick lips."
+msgstr ""
+"اتخيلوا ان الجمل عنده شفايف سميكة! عشان يقدر ياكل النباتات الشائكة الحادة."
+
+#: games/templates/games/guess_the_habitat/level_one.html:494
+msgid ""
+"This animal is called an Andean flamingo and it’s the rarest type of "
+"flamingos."
+msgstr ""
+"ينادوا على هذا الحيوان باسم طائر الفلامنجو الأنديز وهو أندر أنواع طيور "
+"الفلامنجو!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:495
+msgid ""
+"Flamingo's long legs help them not to drown, walk long distances on water, "
+"and also to fly!"
+msgstr ""
+"رجل الفلامنجو الطويلة  تساعدها انها ما تغرق، تمشي مسافات كبيرة على الماء، و "
+"كمان تطير!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:496
+msgid ""
+"Did you know that the Andean flamingo's pink color comes from eating their "
+"favorite food? Which is a type of shrimp!"
+msgstr "تعرفوا انه لون الفلامنجو زهري بسبب اكلها المفضل؟ الي هوا الجمبري!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:497
+msgid "Flamingos stand on 1 leg to conserve body heat."
+msgstr ""
+"الفلامنجو توقف على رجل وحدة مو عشان تتباهى بتوازنها، عشان تحافظ على حرارة "
+"جسمها!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:498
+msgid "When Flamingos get married, they become partners for life!"
+msgstr "لمن الفلامنجو يتزوج، يفضلوا الأزواج مع بعض طول العمر!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:501
+msgid ""
+"If you focus hard enough, you can see that its feather pattern looks like a "
+"tuxedo! This type of penguin is called an Emperor penguin."
+msgstr ""
+"لو ركزتوا، حتلاقوا انه لون شعر الحيوان يبين كانه لابس بدلة! اسم الحيوان هو "
+"البطريق الإمبراطوري و هو نوع من أنواع البطاريق."
+
+#: games/templates/games/guess_the_habitat/level_one.html:502
+msgid ""
+"When one Emperor Penguin marries another, they come up with their unique "
+"sound, so that if one gets lost, they can find each other! and they teach "
+"that sound to their babies too!"
+msgstr "لما يتزوج البطريق بزوجته يخترعوا صوت مميز لهم عشان ما يضيعوا من بعض!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:503
+msgid "Emperor Penguins live in polar deserts, specifically in Antarctica."
+msgstr ""
+"البطريق الإمبراطوري يحب الجو البارد! عشان كدة يعيشوا في الصحراء المتجمدة و "
+"بيتهم اسمه أنتاركتيكا."
+
+#: games/templates/games/guess_the_habitat/level_one.html:504
+msgid "A penguin’s main food consists of fish, krill, squid, and crustaceans."
+msgstr "أكل البطريق المفضل هو السمك، الجمبري، الحبار، و الاستاكوزا. يمي!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:505
+msgid ""
+"Emperor Penguins are the largest type of penguins! and yes there are other "
+"types of penguins."
+msgstr "البطريق الإمبراطوري هو أكبر نوع من أنواع البطاريق!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:508
+msgid ""
+"We've all seen this beautiful bird in cartoons, right? It's called a Mute "
+"Swan."
+msgstr "كلنا شفنا هذا الطائر الجميل في افلام الكرتون صح؟ اسمه البجع الأبكم."
+
+#: games/templates/games/guess_the_habitat/level_one.html:509
+msgid "Its called mute because its the least type of swan to make noise."
+msgstr "سموه البجع الأبكم لانه اكثر نوع هادئ!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:510
+msgid ""
+"These swans look elegant, right? But don't even think about getting close to "
+"their babies, or all of that calmness might turn into anger!"
+msgstr ""
+"شكل البجع أنيق و لطيف صح؟ لكن لو فكرتوا انكم تمسكوا أطفالهم، كل اللطافة "
+"حتقلب لشر!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:513
+msgid ""
+"Don't be fooled by looks because this animal is actually harmless! It's "
+"called Manta Ray."
+msgstr ""
+"نعرف انو الاسم ممكن يخوف، بس ترا الحيوان هذا جدًّا مسالم! اسمه شيطان البحر."
+
+#: games/templates/games/guess_the_habitat/level_one.html:514
+msgid "Manta Ray's are known for their curiosity and will swim with divers!"
+msgstr "معروف شيطان البحر بحس الفضول لدرجة انه يحب يسبح مع الغواصين!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:515
+msgid "Manta Rays have to keep on swimming to stay alive!"
+msgstr "شيطان البحر لازم ما يوقف سباحة عشان لا يموت!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:516
+msgid "Did you know that Manta Rays are one of the largest marine animals!"
+msgstr ""
+
+#: games/templates/games/guess_the_habitat/level_one.html:517
+msgid "Although Manta Rays are huge, their food is super tiny."
+msgstr "تعرفوا ان شيطان البحر من أضخم الحيوانات البحرية!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:520
+msgid ""
+"Pandas climb trees to clean their nails or to escape danger. They also climb "
+"for food of course."
+msgstr ""
+
+#: games/templates/games/guess_the_habitat/level_one.html:521
+msgid ""
+"God gifted pandas with 6 fingers in each hand to grab on bamboo sticks "
+"firmly, since almost all they do when they're awake is eat!"
+msgstr ""
+
+#: games/templates/games/guess_the_habitat/level_one.html:522
+msgid ""
+"Giant Pandas used to be endangered, but in 2016, they’ve been upgraded to "
+"vulnerable."
+msgstr ""
+
+#: games/templates/games/guess_the_habitat/level_one.html:523
+msgid ""
+"With those dark circles, you'd think they’d barely sleep right? In fact, "
+"Pandas spend around 14 hours a day eating and the rest sleeping!"
+msgstr ""
+
+#: games/templates/games/guess_the_habitat/level_one.html:526
+msgid ""
+"This animal looks scary with its big horns, right? It's actually very "
+"friendly with humans! Its called a Domestic Yak, or just Yak for short."
+msgstr ""
+"شكل الحيوان يخوف مع قرونه الكبيرة صح؟ طيب تعرفوا انه هذا الحيوان جدًّا لطيف مع "
+"البشر! اسمه الياك."
+
+#: games/templates/games/guess_the_habitat/level_one.html:527
+msgid "They are herbivores, meaning they don't eat meat. Very healthy, right?"
+msgstr "الياك حيوان ما ياكل اللحم أبدًا يحب يتغذى على الأعشاب فقط! جدًّا صحي صح؟"
+
+#: games/templates/games/guess_the_habitat/level_one.html:528
+msgid "Some yaks live in the wild, but most of them live with humans."
+msgstr "بعض الياك يعيشوا في البرية، لكن أغلبهم يعيشوا مع البشر لأننا أصحابهم!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:529
+msgid ""
+"Yaks survive the mountains cold weather by having thick, long hair that "
+"gives them heat!"
+msgstr ""
+"يقدر الياك يتعايش مع برودة الجبال بسبب شعره السميك و الطويل الي يعطيه دفء!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:530
+msgid ""
+"Yaks have HUGE lungs! It's so that they can breathe better with the low "
+"oxygen levels in the mountains."
+msgstr ""
+"حيوان الياك عنده رئة كبيرة! عشان يقدروا يعيشوا في الجبال العالية لأن نسبة "
+"الأكسجين في الجبال جدًّا قليلة!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:533
+msgid "The African Elephant is the world's largest land mammal!"
+msgstr "تعالوا نتعرف على أكبر الثدييات البرية في العالم! الفيل الأفريقي."
+
+#: games/templates/games/guess_the_habitat/level_one.html:534
+msgid ""
+"Elephants use their huge ears as fans to cool themselves. How cool is that?"
+msgstr "انتوا متخيلين ان الفيل يستخدم اذنه الكبيره زي المروحة للتبريد عن نفسه!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:535
+msgid ""
+"Did you know that elephants eat so much that they spend up to three-quarters "
+"of their day eating?"
+msgstr "الفيل يقضي تقريبًا ثلاث أرباع يومه وهو ياكل!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:536
+msgid ""
+"Do you know the saying that goes like elephants never forget? It’s true! "
+"Their memory is so strong!"
+msgstr ""
+"تعرفوا ان الفيل ذاكرته جدًا قوية! لأن الجزء المسؤول عن الذاكرة في عقله حجمه "
+"كبير."
+
+#: games/templates/games/guess_the_habitat/level_one.html:537
+msgid ""
+"Did you know that Elephants communicate through vibrations from the ground?"
+msgstr ""
+"اتخيلوا ان الفيلة ما تتكلم مع بعض! يحبوا يتواصلوا عن طريق الذبذات في الأرض!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:695
+msgid "Congratulation!"
+msgstr "مبروك!"
+
+#: games/templates/games/guess_the_habitat/level_one.html:696
+msgid ""
+"now you can move to level two for more challanges or you can stay here and "
+"enjoy more with the animals"
+msgstr ""
+"الان تقدر تنطلق وتكمل الجزء الثاني من اللعبة، او تبقى هنا وتلعب مرره ثانيه "
+"مع الحيوانات"
+
+#: games/templates/games/guess_the_habitat/level_one.html:701
+msgid "Stay in level one"
+msgstr "ابقى في المستوى الاول"
+
+#: games/templates/games/guess_the_habitat/level_one.html:867
+msgid "Arabian Camel"
+msgstr "الجمل العربي"
+
+#: games/templates/games/guess_the_habitat/level_one.html:878
+msgid "Andean Flamingo"
+msgstr "الفلامنجو الأنديزي"
+
+#: games/templates/games/guess_the_habitat/level_one.html:889
+msgid "Emperor Penguin"
+msgstr "البطريق الإمبراطوري"
+
+#: games/templates/games/guess_the_habitat/level_one.html:900
+msgid "Mute Swan"
+msgstr "البجع الأبكم الهادي"
+
+#: games/templates/games/guess_the_habitat/level_one.html:909
+msgid "Manta Ray"
+msgstr "شيطان البحر"
+
+#: games/templates/games/guess_the_habitat/level_one.html:920
+msgid "Giant Panda"
+msgstr "الباندا الضخمة"
+
+#: games/templates/games/guess_the_habitat/level_one.html:930
+msgid "Domestic Yak"
+msgstr "الياك"
+
+#: games/templates/games/guess_the_habitat/level_one.html:941
+msgid "African Elephant"
+msgstr "الفيل الأفريقي"
+
+#: games/templates/games/guess_the_habitat/level_one.html:958
+msgid "Level one"
+msgstr "المستوى الأول"
+
+#: games/templates/games/guess_the_habitat/level_three.html:393
+msgid "LEVEL THREE - match the Animals with their Habitats"
+msgstr "المستوى الثالث - طابق الحيوانات مع مواطنها"
+
+#: games/templates/games/guess_the_habitat/level_three.html:469
+msgid "go back to games?"
+msgstr "رجوع لصفحة الالعاب"
+
+#: games/templates/games/guess_the_habitat/level_three.html:482
+msgid ""
+"Wasn't that fun! Didn't I tell you that was an excellent job, my friend? "
+"Since you learned about the animals and the habitats, let's see if you can "
+"identify the animal with their natural habitat."
+msgstr "ما انبسطت! ما قلتلك انك فنان! بما انك تعلمت عن الحيوانات و المواطن ، خلينا نشوف إذا تقدر توصل الحيوان بموطنه الطبيعي!"
+
+#: games/templates/games/guess_the_habitat/level_three.html:816
+msgid "Camels in Deserts"
+msgstr "الجمال في الصحراء"
+
+#: games/templates/games/guess_the_habitat/level_three.html:819
+msgid ""
+"Camels can be found in both the Subtropical desert and the cold-winter "
+"desert. Camels can survive the desert with no water through their humps "
+"where stored fat can be turned to liquid."
+msgstr ""
+"تعيش الجمال في الصحاري الحارة و الصحاري الباردة شتاءً. تعيش الجمال في الصحراء "
+"بدون ماء لأنه عندها سنام يحتوي على دهون و تتحول لسوائل."
+
+#: games/templates/games/guess_the_habitat/level_three.html:823
+msgid "Pandas in Forests"
+msgstr "الباندا في الغابات"
+
+#: games/templates/games/guess_the_habitat/level_three.html:830
+msgid "Elephants in Grasslands"
+msgstr "الفيلة في المراعي"
+
+#: games/templates/games/guess_the_habitat/level_three.html:833
+msgid ""
+"The African Elephant can inhibit all types of grasslands, rainforests, and "
+"subtropical deserts. Roots, grasses, fruit, and bark is what they feed on "
+"all day long."
+msgstr ""
+"الفيل الأفريقي يقدر يعيش في كل أنواع المراعي، الغابات الإستوائية، و الصحاري "
+"الحارة. الجذور، الزرع، الفواكه، و لحاء الشجر هو أكلهم المفضل."
+
+#: games/templates/games/guess_the_habitat/level_three.html:837
+msgid "Yaks in Mountains"
+msgstr "الياك في الجبال"
+
+#: games/templates/games/guess_the_habitat/level_three.html:840
+msgid ""
+"Domestic Yaks can survive the mountains cold weather because of their thick "
+"hair. Also, their large lungs can save them from low oxygen levels in "
+"mountains!"
+msgstr ""
+"الياك يقدر يستحمل العيش في الجبال لانه عنده شعر كثيف يقدر يعطيه دفء في الجو "
+"البارد. كمان رئته جدًا كبيرة فتساعده يتنفس لأن نسبة الأكسجين جدًّا قليلة في "
+"الجبال!"
+
+#: games/templates/games/guess_the_habitat/level_three.html:844
+msgid "Penguins in Polar regions"
+msgstr "البطريق في المناطق القطبية"
+
+#: games/templates/games/guess_the_habitat/level_three.html:847
+msgid ""
+"Emperor penguins live in polar deserts, specifically in Antarctica. Their "
+"thick skin and fat keeps them warm in the cold weather. They also gather "
+"their friends to stay warm."
+msgstr ""
+"يعيش البطريق الإمبراطوري في الصحراء الجليدية، تحديدًا في أنتاركتيكا. جلدهم "
+"السميك و الدهون بتعطيهم دفء في الجو البارد. و كمان يتجمعوا الأصحاب جنب بعض "
+"عشان يدّفوا."
+
+#: games/templates/games/guess_the_habitat/level_three.html:851
+msgid "Swans in Wet lands"
+msgstr "البجع الأبكم في الأراضي الرطبة"
+
+#: games/templates/games/guess_the_habitat/level_three.html:854
+msgid ""
+"Swans can be found in most types of wetlands such as ponds, slow rivers, and "
+"lakes. They need to live on wetlands because all their food lives there too! "
+"they eat frogs, snails, and fish."
+msgstr ""
+"البجع يعيش في أغلب المياه الرطبة زي البرك، الأنهار البطيئة، والبحيرات. لازم "
+"يعيشوا هناك لأنو أكلهم كمان يعيش هناك! يحبوا ياكل الضفادع، الحلزون، و السمك."
+
+#: games/templates/games/guess_the_habitat/level_three.html:858
+msgid "Flamingos in Islands"
+msgstr "الفلامينجو في الجزر"
+
+#: games/templates/games/guess_the_habitat/level_three.html:861
+msgid ""
+"Andean flamingos are one of the 6 types of flamingos and they live in "
+"shallow coastal lagoons of islands."
+msgstr ""
+"الفلامنجو الأندي هو واحد من ٦ أنواع من الفلامنجو و يعيشوا في بحيرات الجزر "
+"الساحلية. "
+
+#: games/templates/games/guess_the_habitat/level_three.html:865
+msgid "Manta Rays in the Ocean"
+msgstr "شيطان البحر في المحيطات"
+
+#: games/templates/games/guess_the_habitat/level_three.html:868
+msgid ""
+"Manta Rays are found all over the world is oceans, specifically in cool "
+"water."
+msgstr "شيطان البحر موجود في كل المحيطات، تحديدًا في المياه الباردة."
+
+#: games/templates/games/guess_the_habitat/level_three.html:878
+msgid "Level three"
+msgstr "المستوى الثالث"
+
+#: games/templates/games/guess_the_habitat/level_two.html:393
+msgid "LEVEL TWO - match the Habitats"
+msgstr "المستوى الثاني - طابق المواطن"
+
+#: games/templates/games/guess_the_habitat/level_two.html:469
+msgid "go to level three ?"
+msgstr "انتقل إلى المستوى الثالث؟"
+
+#: games/templates/games/guess_the_habitat/level_two.html:812
+msgid "Deserts"
+msgstr "الصحاري"
+
+#: games/templates/games/guess_the_habitat/level_two.html:815
+msgid ""
+"I know the first thing that came to your mind was a boring dry place, right? "
+"Well, let me explain what a desert is. A desert is any large area with "
+"little to no rain."
+msgstr ""
+"أول شيء جا في بالكم مكان حار و يطفش صح؟ الصحراء هي اي مكان واسع نادرًا تمطر "
+"فيه."
+
+#: games/templates/games/guess_the_habitat/level_two.html:816
+msgid "Some desserts are freezing cold! they are called the polar deserts."
+msgstr ""
+"مو كل الصحاري حارة! بعض الصحاري تكون جدًّا باردة و اسمها الصحاري الجليديبة."
+
+#: games/templates/games/guess_the_habitat/level_two.html:817
+msgid ""
+"The largest hot desert is the Sahara and the larget coldest one is "
+"Antarctica!"
+msgstr ""
+"أكبر صحراء حارة هي الصحراء الكبرى و أكبر صحراء جليدية هي القطب الجنوبي!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:818
+msgid "Camels live in hot deserts and polar bears live in cold deserts."
+msgstr ""
+"الجمال تعيش في الصحراء الحارة، أما الدب القطبي يعيش في الصحراء الجليدية."
+
+#: games/templates/games/guess_the_habitat/level_two.html:822
+msgid "Forests"
+msgstr "الغابات"
+
+#: games/templates/games/guess_the_habitat/level_two.html:825
+msgid ""
+"Have you ever been camping? Do you know where people usually camp? In "
+"forests of course!"
+msgstr "عمركم خيَّمتوا؟ طيب تعرفوا فين الناس عادة يخيِّموا؟ في الغابات طبعًا!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:826
+msgid "The largest forest on our planet is the Amazon Rainforest."
+msgstr "أكبر غابة على كوكبنا هي غابة الأمازون!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:827
+msgid ""
+"Forests are very important because they are made up of trees and trees give "
+"us oxygen to breathe."
+msgstr ""
+"الغابات جدًّا مهمة لأن فيها شجر و الشجر هو الي يعطينا أوكسجين عشان نتنفس!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:828
+msgid "Pandas live in bamboo forests while gorillas live in rain forests."
+msgstr ""
+"غابات الخيزران مثلًا تعيش فيها الباندا، و الغابات الإستوائية تعيش فيها "
+"الغوريلا."
+
+#: games/templates/games/guess_the_habitat/level_two.html:832
+msgid "Grasslands"
+msgstr "المراعي"
+
+#: games/templates/games/guess_the_habitat/level_two.html:835
+msgid ""
+"This is a cows favorite place! and it is called a grassland, which is any "
+"large area filled with grass and short plants."
+msgstr ""
+"هذا المكان المفضل للفيلة! اسمه المراعي و هو اي مكان واسع مليان زرع و نباتات "
+"القصيرة."
+
+#: games/templates/games/guess_the_habitat/level_two.html:836
+msgid "Grasslands are perfect for growing wheat and corn. Yummy!"
+msgstr "المراعي مكان مثالي لزرع القمح و الذرة. يمي!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:837
+msgid "Some snakes live in grasslands."
+msgstr ""
+
+#: games/templates/games/guess_the_habitat/level_two.html:841
+msgid "Mountains"
+msgstr "الجبال"
+
+#: games/templates/games/guess_the_habitat/level_two.html:844
+msgid ""
+"Have you ever heard of Mount Everest? Its the tallest mountain on Earth!"
+msgstr "سمعتوا بجبل افريست؟ هذا أطول جبل على كوكب الأرض!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:845
+msgid "A mountain is a part of the ground that rises above everything else."
+msgstr "لما يكون في أرض جدًّا مرتفعة عن باقي الأراضي، نسميها جبل."
+
+#: games/templates/games/guess_the_habitat/level_two.html:846
+msgid ""
+"The higher you will climb, the harder it is to breathe! because oxygen "
+"levels are low in mountains."
+msgstr ""
+"كل ما اتسلقتوا أعلى، كل ما صار أصعب انه تتنفسوا! لأنه نسبة الأكسجين قليلة في "
+"الجبال."
+
+#: games/templates/games/guess_the_habitat/level_two.html:847
+msgid "Some of the animals that live in mountains are yaks and brown bears."
+msgstr "بعض الحيوانات الي تعيش في الجبال هي الياك و الدب البني. "
+
+#: games/templates/games/guess_the_habitat/level_two.html:851
+msgid "Polar regions"
+msgstr "المناطق القطبية"
+
+#: games/templates/games/guess_the_habitat/level_two.html:854
+msgid "Polar regions are the coldest regions of our planet!"
+msgstr "المناطق القطبية هي أبرد المناطق في كوكبنا!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:855
+#, fuzzy
+#| msgid "Polar regions are freezing cold and filled with snow and ice. That"
+msgid ""
+"Polar regions are freezing cold and filled with snow and ice. That is why it "
+"is hard for humans to live there."
+msgstr ""
+"المناطق القطبية مغطاه بالثلج و الجليد! فدرجة الحرارة جدًّا منخفضة و احنا البشر "
+"ما نقدر نعيش فيها من شدة البرودة."
+
+#: games/templates/games/guess_the_habitat/level_two.html:856
+msgid "Planet Earth has 2 polars: Antarctican and the Arctic."
+msgstr "كوكب الأرض عنده منطقتين قطبية: الشمالية و الجنوبية. "
+
+#: games/templates/games/guess_the_habitat/level_two.html:857
+msgid "Penguins and some orcas live in polar regions."
+msgstr "البطاريق و بعض أنواع الحوت القاتل يعيشوا في المناطق القطبية."
+
+#: games/templates/games/guess_the_habitat/level_two.html:861
+msgid "Wet lands"
+msgstr "الأراضي الرطبة"
+
+#: games/templates/games/guess_the_habitat/level_two.html:864
+msgid "This Magical habitat we always see in movies is called a wetland."
+msgstr "هذا الموطن السحري الي شفناه في أفلام كثيرة اسمه الأراضي الرطبة!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:865
+msgid "Wetlands are lands where the ground is covered with shallow water."
+msgstr "لأراضي الرطبة هي أراضي مغطاه بمياه غير عميقة. "
+
+#: games/templates/games/guess_the_habitat/level_two.html:866
+msgid "Some of the animals that live in wetlands are frogs and swans."
+msgstr "الضفادع و البجع هي بعض الحيوانات الي تعيش في الأراضي الرطبة!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:867
+msgid "There is a The World Wetland Day! It is on 2nd of February."
+msgstr "في يوم عالمي للأراضي الرطبة! بتاريخ ٢ فبراير."
+
+#: games/templates/games/guess_the_habitat/level_two.html:871
+msgid "Island"
+msgstr "الجزر"
+
+#: games/templates/games/guess_the_habitat/level_two.html:874
+#, fuzzy
+#| msgid "This is probably the best place to spend a vacation in! It"
+msgid ""
+"This is probably the best place to spend a vacation in! It is called an "
+"island."
+msgstr "هذا افضل مكان تقدر تقضي فيه الإجازة! اسمها هو الجزيرة."
+
+#: games/templates/games/guess_the_habitat/level_two.html:875
+msgid ""
+"An island is a large land that is not connected to any other land and is "
+"surrounded by water from all sides."
+msgstr ""
+"اتخيلوا أرض غير مرتبطة بأي أرض تانية و حولها ماء من كل الجهات. هذه هي "
+"الجزيرة."
+
+#: games/templates/games/guess_the_habitat/level_two.html:876
+msgid ""
+"The biggest island on our planet is Greenland and the smallest island is "
+"Bishop Rock."
+msgstr "أكبر جزيرة على كوكب الأرض هي قرينلاند، و أصغر جزيرة هي بيشوب روك!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:877
+msgid "Some of the animals that live on islands are flamingos and iguanas."
+msgstr "بعض الحيوانات الي تعيش في الجزر هي الفلامنجو و الإيغوانا!"
+
+#: games/templates/games/guess_the_habitat/level_two.html:881
+msgid "Ocean"
+msgstr "المحيطات"
+
+#: games/templates/games/guess_the_habitat/level_two.html:884
+#, python-format
+msgid "71%% of Earth is covered with water and this water is called the ocean."
+msgstr ""
+"تعرفوا ان كوكبنا يغطيه الماء بنسبة ٧١٪ ! يعني أكثر من النص! اسم هذه المياه "
+"هو المحيطات."
+
+#: games/templates/games/guess_the_habitat/level_two.html:885
+#, python-format
+msgid ""
+"Did you know that the oceans of our planet are so deep that only 5%% of them "
+"have been discovered?"
+msgstr "تعرفوا انه محيطات كوكبنا عميقة جدًّا لدرجة بس ٥٪ من المحيط اكتشفوه؟"
+
+#: games/templates/games/guess_the_habitat/level_two.html:886
+msgid "The largest ocean is called the pacific ocean."
+msgstr "أكبر محيط على كوكب الأرض هو المحيط الهادي."
+
+#: games/templates/games/guess_the_habitat/level_two.html:887
+msgid "Manta Rays and octuposes live in the ocean."
+msgstr "شيطان البحر و الأخطبوط هي من حيوانات الي تعيش في المحيطات."
+
+#: games/templates/games/guess_the_habitat/level_two.html:897
+msgid "Level two"
+msgstr "المستوى الثاني"
+
+#: games/templates/games/guess_the_habitat/level_two.html:898
+msgid "Wow that was fast! Now match the identical habitats together."
+msgstr "واو ما شاء الله خلصنا بسرعة! الآن حنوصل المواطن المتشابهة مع بعض.!"
+
+#: games/templates/games/home.html:53
+msgid "our games"
+msgstr "شوف العابنا"
+
+#: games/templates/games/home.html:68
+msgid "age"
+msgstr "العمر"
+
+#: games/templates/games/home.html:82
+msgid "Guess the Habitat!"
+msgstr "خمن المواطن"
+
+#: games/templates/games/home.html:83
+msgid ""
+"Let's discover more about animals and their habitats! Match the cards and "
+"fun facts will pop up! Do you think you'll make it to the final level and "
+"win?"
+msgstr ""
+"يلا نكتشف أكثر عن الحيوانات و المواطن! طابق الكروت و حتطلعلك حقائق ما كنت "
+"تعرفها! تتوقع حتوصل للمستوى الأخير عشان تفوز؟"
+
+#: games/templates/games/home.html:96
+msgid "Play"
+msgstr "العب"
+
+#: main/templates/main/base.html:162
+msgid "Home"
+msgstr "الرئيسية"
+
+#: main/templates/main/base.html:171
+msgid "Games"
+msgstr "الألعاب"
+
+#: main/templates/main/base.html:180
+msgid "Team"
+msgstr "الفريق"
+
+#: main/templates/main/base.html:252
+msgid "Shortcuts"
+msgstr "اختصارات"
+
+#: main/templates/main/base.html:255
+msgid "Guess the Habitat"
+msgstr "خمن المواطن"
+
+#: main/templates/main/base.html:263
+msgid "Other sites"
+msgstr "مواقع أخرى"
+
+#: main/templates/main/base.html:266
+msgid "Global Shapers"
+msgstr "جلوبل شيبرز"
+
+#: main/templates/main/base.html:267 main/templates/main/landing.html:44
+msgid "Jeddah Hub"
+msgstr "مركز جدة"
+
+#: main/templates/main/base.html:268
+msgid "Al-Khobar Hub"
+msgstr "مركز الخبر"
+
+#: main/templates/main/base.html:269
+msgid "Riyadh Hub"
+msgstr "مركز الرياض"
+
+#: main/templates/main/base.html:276
+msgid "Follow us"
+msgstr "تابعنا"
+
+#: main/templates/main/landing.html:44
+msgid ""
+"Green Gaming is a fun educational online-gaming platform based on our "
+"spectacular planet. It focuses on spreading awareness about environmental "
+"issues to prepare our future heroes for their rescue mission 💪. "
+msgstr ""
+"جرين جايمنق هي منصة إلكترونية تثقيفية مليئة بالالعاب الممتعة عن كوكبنا "
+"الخلاب و تنشر الوعي عن مشاكله البيئية لتجهيز أبطال المستقبل في مهمة إنقاذه 💪"
+
+#: main/templates/main/landing.html:44
+msgid "initiative of Global Shapers"
+msgstr "مبادرة من الجلوبل شيبرز"
+
+#: main/templates/main/landing.html:54 main/templates/main/landing.html:193
+msgid "see our games"
+msgstr "شوف العابنا"
+
+#: main/templates/main/landing.html:99
+msgid "Mission"
+msgstr "مهمتنا"
+
+#: main/templates/main/landing.html:100
+msgid "Our Goal is"
+msgstr "هدفنا هو"
+
+#: main/templates/main/landing.html:113
+msgid ""
+"To raise a generation of super heroes that will protect our fascinating "
+"green planet and help in saving it! 🦸🦸‍♂️."
+msgstr ""
+"هدفنا هو انه نطلِّع جيل من الأبطال الخارقين يدافعوا عن كوكبنا الأخضر المدهش و "
+"يساعدوا في المحافظة عليه!"
+
+#: main/templates/main/landing.html:135
+msgid "AWARENESS"
+msgstr "وعي"
+
+#: main/templates/main/landing.html:150
+msgid "FUN"
+msgstr "مرح"
+
+#: main/templates/main/landing.html:165
+msgid "EDUCATIONAL"
+msgstr "تعليم"
+
+#: main/templates/main/landing.html:187
+msgid "we launched a new"
+msgstr "اطلقنا"
+
+#: main/templates/main/landing.html:189
+msgid "game!!!"
+msgstr "لعبة جديدة"
+
+#: main/templates/main/team.html:26
+msgid "Team members"
+msgstr "اعضاء الفريق"
+
+#: main/templates/main/team.html:46
+msgid ""
+"I am Ghaidaa Khan, a computer science student, but that’s not everything "
+"about me. I am self defined explorer and I love to learn a new thing "
+"everyday if it's possible, Just like you!"
+msgstr ""
+"انا غيداء خان، طالبة علوم حاسبات لكن دا مو كل شيء عني. انا دايما اعرف نفسي "
+"اني مستكشفة و محبة للتعلم، زيكم انتوا! "
+
+#: main/templates/main/team.html:68
+msgid "Bashayer"
+msgstr "بشاير"
+
+#: main/templates/main/team.html:71
+msgid ""
+"Greeting fellow humans! Bashayer is here. A barista by morning, Advertisment "
+"student by noon and a fairy by night ;) i make magic happen."
+msgstr ""
+"السلام عليكم أيها البشر! بشائر بنتن هنا محضرة قهوة في الصباح, طالبة إعلان في "
+"الضهر, أخت تنة و رنة في الليل ؛)"
+
+#: main/templates/main/team.html:93
+msgid "Rodeen"
+msgstr "رودين"
+
+#: main/templates/main/team.html:96
+msgid ""
+"Hello everyone! My names Rodeen and i don't like writing about myself. I "
+"love watching Disney movies and cartoons all day. oh, and i'm a college "
+"student too."
+msgstr ""
+"أهلًا! اسمي رودين و ما أحب أكتب عن نفسي بس أحب أتفرج أفلام ديزني و كرتون طول "
+"اليوم. اوه صح، و أنا طالبة جامعة كمان."
+
+#: main/templates/main/team.html:118
+msgid "Monier"
+msgstr "منير"
+
+#: main/templates/main/team.html:121
+msgid ""
+"My name is Monier Daghistani, I’m an architecture student. I have a lot of "
+"interest in the animal world and in the environment. I believe that we can "
+"help make the world a better place one small step at a time."
+msgstr ""
+"اسمي منير داغستاني ، أنا طالب هندسة معمارية ، لدي اهتمام كبير بالحيوانات "
+"ومساعدة البيئة ، أعتقد حقًا أنه يمكننا تغيير عقول الناس وجعل العالم مكانًا "
+"أفضل."
+
+#: main/templates/main/team.html:143
+msgid "Mohammed"
+msgstr "محمد"
+
+#: main/templates/main/team.html:168
+msgid "Turki"
+msgstr "تركي"
+
+#: main/templates/main/team.html:171
+msgid ""
+"hi, my name is Turki, I am a self-taught programmer, tech entrepreneur, "
+"feminist, minimalist, and vegan. I love to work every day while listening to "
+"electrical music, and I love to dance too."
+msgstr ""
+"اهلا، انا اسمي تركي، انا مبرمج تعلمت البرمجة بنفسي، انا رائد اعمال تقني، "
+"بسيط وإيضا نباتي. احب دائما اشتغل وانا اتسمع للموسيقى، وبرضو احب ارقص."
+
+#: main/templates/main/team.html:193
+msgid "Renad Alorri"
+msgstr "ريناد العري"
+
+#~ msgid "Our Games"
+#~ msgstr "شوف العابنا"
+
+#~ msgid "hi"
+#~ msgstr "اهلا"

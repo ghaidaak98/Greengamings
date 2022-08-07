@@ -1,0 +1,172 @@
+{% extends 'main/base.html' %}
+
+
+{% block header %}
+{% load static %}
+<style>
+@media (min-width: 1200px) {
+    header.main-header{
+    background-color: #f6f6f6;
+        /* -webkit-box-shadow: 0px 3px 7px 1px rgba(0,0,0,0.17); */
+    -moz-box-shadow: 0px 3px 7px 1px rgba(0,0,0,0.17);
+    box-shadow: 0px 3px 7px 1px rgba(0,0,0,0.17);
+    }
+
+}
+@media (max-width: 768px) {
+    .lqd-column.col-md-4 {
+        margin: 15px !important;
+    }
+}
+.btn-solid:hover {
+    background-color: #abdf87;
+    border-color: #abdf87;
+}
+</style>
+
+{% endblock %}
+
+
+{% block main %}
+{% load static %}
+{% load i18n %}
+
+<main id="content" class="content">
+    <div class="lqd-particles-bg-wrap">
+
+        <div class="ld-particles-container">
+            <div
+                class="ld-particles-inner"
+                id="ld-1527244273759-519b63e0-a9d6"
+                data-particles="true"
+                data-particles-options='{"particles":{"number":{"value":5,"density":2},"color":{"value":["#f9b851","#60eacb","#ff97af","#4e6bff"]},"shape":{"type":["circle","edge","triangle"]},"size":{"value":55,"random":true,"anim":{"enable":true,"size_min":40,"speed":5}},"move":{"enable":true,"direction":"right","speed":1,"random":true,"out_mode":"out","attract":{"enable":true,"rotateX":1200,"rotateY":600}}},"interactivity":[],"retina_detect":true}'>
+            </div>
+        </div>
+
+    </div><!-- /.lqd-particles-bg-wrap -->
+    <section class="vc_row pt-150 pb-50">
+        <div class="container">
+            <div class="row">
+
+                <div class="lqd-column col-md-8 col-md-offset-2">
+                    <header class="fancy-title text-center px-md-7 mb-70">
+                        <h2 class="title h1 mb-4">{% trans "our games" %}</h2>
+                    </header>
+                </div><!-- /.col-md-8 col-md-offset-2 -->
+
+
+                <div class="row">
+                    <!-- -------------------------------------- -->
+                    <div class="lqd-column col-md-4">
+                        <div class="ld-flipbox ld-flipbox-rl">
+                            <div class="ld-flipbox-wrap">
+
+                                <div class="ld-flipbox-face ld-flipbox-front bg-gradient-primary-tl">
+                                    <p style="position: absolute;
+                                    top: 10px;
+                                    left: 15px;
+                                    color: #ffffff;"><i class="fas fa-child mx-1 "></i>{% trans "age" %} +5</p>
+                                    <p style="position: absolute;
+                                    top: 10px;
+                                    right: 15px;
+                                    color: #ffffff;">#1</p>
+                                    <span class="ld-flipbox-overlay"></span>              
+                                    <div class="ld-flipbox-inner">                                        
+                                        <div class="iconbox iconbox-md">
+                                            <div class="iconbox-icon-wrap">
+                                                <span class="iconbox-icon-container text-white">
+                                                    <i class="fas fa-map-signs"></i>
+                                                </span>
+                                            </div><!-- /.iconbox-icon-wrap -->
+                                            <div class="contents">
+                                                <h3 class="font-weight-bold">{% trans "Guess the Habitat!" %}</h3>
+                                                <p><span>{% trans "Let's discover more about animals and their habitats! Match the cards and fun facts will pop up! Do you think you'll make it to the final level and win?" %}</span></p>
+                                            </div><!-- /.contents -->
+                                        </div><!-- /.iconbox -->	
+                                        
+                                    </div><!-- /.ld-flipbox-inner -->
+                                    
+                                </div><!-- /.ld-flipbox-front -->
+                                
+                                <div class="ld-flipbox-face ld-flipbox-back">      
+                                    <span class="ld-flipbox-overlay ld-overlay"></span>
+                                    <div class="ld-flipbox-inner">
+                                        <a href="{% url 'guess_the_habitat_one' %}" class="btn btn-solid font-size-12 lh-2 text-uppercase ltr-sp-175 btn-white">
+                                            <span>
+                                                <span class="btn-txt">{% trans "Play" %}</span>
+                                            </span>
+                                        </a>
+                                    </div><!-- /.ld-flipbox-inner -->
+                                </div><!-- /.ld-flipbox-back -->
+                        
+                            </div><!-- /.ld-flipbox-wrap -->
+                        </div><!-- /.ld-flipbox -->
+                    </div><!-- /.lqd-column col-md-4 -->
+                    <!-- -------------------------------------- -->
+                </div><!-- /.row -->
+            
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+</main><!-- /#content.content -->
+{% endblock %}
+
+{% block footer %}
+<!-- <script>
+    // Set the date we're counting down to
+var game2Date = new Date("July 15, 2020 15:37:25").getTime();
+var game3Date = new Date("Aug 15, 2020 15:37:25").getTime();
+
+// Update the count down every 1 second
+var game2 = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = game2Date - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("game-2").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("game-2").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+var game3 = setInterval(function() {
+
+// Get today's date and time
+var now = new Date().getTime();
+  
+// Find the distance between now and the count down date
+var distance = game3Date - now;
+  
+// Time calculations for days, hours, minutes and seconds
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+// Output the result in an element with id="demo"
+document.getElementById("game-3").innerHTML = days + "d " + hours + "h "
++ minutes + "m " + seconds + "s ";
+  
+// If the count down is over, write some text 
+if (distance < 0) {
+  clearInterval(x);
+  document.getElementById("game-3").innerHTML = "EXPIRED";
+}
+}, 1000); -->
+
+</script>
+{% endblock %}

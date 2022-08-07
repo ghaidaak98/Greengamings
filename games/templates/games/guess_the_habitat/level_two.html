@@ -1,0 +1,901 @@
+{% extends 'games/games_base.html' %}
+
+{% block header %}
+{% load static %}
+<style>
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<style>
+@media only screen and (min-width: 768px) {
+    .deck {
+        width: 610px !important;
+        height: 600px !important;
+    }
+}
+@media (min-width: 1200px) {
+    header.main-header{
+    background-color: #f6f6f6;
+        /* -webkit-box-shadow: 0px 3px 7px 1px rgba(0,0,0,0.17); */
+    -moz-box-shadow: 0px 3px 7px 1px rgba(0,0,0,0.17);
+    box-shadow: 0px 3px 7px 1px rgba(0,0,0,0.17);
+    }
+}
+
+.fade {
+    opacity: 0!important;
+}
+
+#card-deck.match {
+    background: #abdf87;
+}
+#card-deck.unmatched {
+    background: #e85151;
+}
+.card img {
+    visibility: hidden;
+}
+.card.show img, .card.match img  {
+    visibility: visible;
+}
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+main ul .card {
+	text-align: center;
+	display: flex !important;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+main header  {
+	margin-top: 80px;
+}
+
+
+/*
+ * Styles for the deck of cards
+ */
+
+
+.deck {
+	width: 85%;
+	background: #716F71;
+	padding: 1rem;
+	border-radius: 4px;
+	box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 0 2em;
+}
+
+.deck .card {
+	height: 3.7rem;
+	width: 3.7rem;
+	margin: 0.2rem 0.2rem;
+	background: #141214;;
+	font-size: 0;
+	color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+	transform: rotateY(0);
+	background: #02b3e4;
+	cursor: default;
+	animation-name: flipInY;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .75s;
+}
+
+.deck .card.show {
+	font-size: 33px;
+}
+
+.deck .card.match {
+	cursor: default;
+	/* background: #E5F720; */
+	font-size: 33px;
+	animation-name: rubberBand;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .75s;
+}
+
+.deck .card.unmatched {
+	animation-name: pulse;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .75s;
+	/* background: #e2043b; */
+}
+
+.deck .card.disabled {
+	pointer-events: none;
+	opacity: 0.9;
+}
+
+
+/*
+ * Styles for the Score Panel
+ */
+
+
+.score-panel {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.score-panel .stars {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+	list-style: none;
+	display: inline-block;
+}
+
+.score-panel .restart {
+	float: right;
+	cursor: pointer;
+}
+
+.fa-star {
+	color: #FFD700;
+}
+
+.timer {
+	display: inline-block;
+	margin: 0 1rem;
+}
+
+
+/*
+ * Styles for congratulations modal
+ */
+
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+  
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 5px;
+	width: 85%;
+	position: relative;
+	transition: all 5s ease-in-out;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+  
+.popup h2 {
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .close:hover {
+	color: #E5F720;
+}
+
+.popup .content-1,
+.content-2 {
+	max-height: 30%;
+	overflow: auto;
+	text-align: center;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+#starRating li {
+	display: inline-block;
+}
+
+#play-again {
+	background-color: #141214;
+	padding: 0.7rem 1rem;
+	font-size: 1.1rem;
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: #ffffff;
+	border-radius: 5px;
+}
+
+/* animations */
+@keyframes flipInY {
+	from {
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+
+	40% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity: 1;
+	}
+
+	80% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+
+	to {
+		transform: perspective(400px);
+	}
+}
+
+@keyframes rubberBand {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, .95, 1);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+
+/****** Media queries
+***************************/
+
+
+/* @media only screen and (max-width: 320px) {
+	.deck {
+		width: 85%;
+	}
+
+	.deck .card {
+		height: 4.7rem;
+		width: 4.7rem;
+	}
+} */
+
+
+/* For Tablets and larger screens
+****************/
+
+@media only screen and (min-width: 768px) {
+	.container {
+		font-size: 22px;
+	}
+
+	.deck {
+		width: 660px;
+		height: 680px;
+	}
+
+	.deck .card {
+		height: 125px;
+		width: 125px;
+	}
+
+	.popup {
+		width: 60%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	.deck {
+		width: 100%;
+	}
+
+	.popup {
+		width: 60%;
+	}
+}
+
+
+</style>
+{% endblock %}
+
+{% block main %}
+{% load static %}
+{% load i18n %}
+
+<main>
+    <div class="container">
+        <header class="mt-4" >
+            <h1>{% trans "Guess The Habitat" %}</h1>
+        </header>
+        <h5 style="margin-top: -45px; margin-bottom: 50px; color: gray;font-weight: lighter;">{% trans "LEVEL TWO - match the Habitats" %}</h5>
+        <a id="start-button" onclick="firstGameStart()" class="btn btn-default circle btn-bordered border-thin btn-icon-right btn-icon-circle btn-icon-solid font-size-12 font-weight-bold text-uppercase ltr-sp-05 mb-3" >
+            <span>
+                <span class="btn-txt">{% trans "start the game" %}</span>
+                <span class="btn-icon"><i class="fa fa-play"></i></span>
+            </span>
+        </a>
+        <section id="game-monitor" class="score-panel">
+            <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+
+            <span class="moves">0</span> {% trans "Move(s)" %}
+
+            <div class="timer">
+            </div>
+
+            <!-- <div class="restart" onclick=firstGameStart()>
+                <i class="fas fa-redo-alt"></i>
+            </div> -->
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card disabled" type="deserts">
+                <img src="{% static 'img/games/deserts.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="deserts">
+                <img src="{% static 'img/games/deserts.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="forests">
+                <img src="{% static 'img/games/forests.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="forests">
+                <img src="{% static 'img/games/forests.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="grasslands">
+                <img src="{% static 'img/games/grasslands.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="grasslands">
+                <img src="{% static 'img/games/grasslands.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="mountain">
+                <img src="{% static 'img/games/mountain.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="mountain">
+                <img src="{% static 'img/games/mountain.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="polarRegions">
+                <img src="{% static 'img/games/polar-regions.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="polarRegions">
+                <img src="{% static 'img/games/polar-regions.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="wetLands">
+                <img src="{% static 'img/games/wet-lands.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="wetLands">
+                <img src="{% static 'img/games/wet-lands.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="island">
+                <img src="{% static 'img/games/island.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="island">
+                <img src="{% static 'img/games/island.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="ocean">
+                <img src="{% static 'img/games/ocean.jpg' %}" alt="" srcset="">
+            </li>
+            <li class="card disabled" type="ocean">
+                <img src="{% static 'img/games/ocean.jpg' %}" alt="" srcset="">
+            </li>
+        </ul>
+        <a id="level-two-button" style="display: none;" class="level-two btn btn-solid circle btn-bordered border-thin btn-icon-right btn-icon-circle btn-icon-solid font-size-12 font-weight-bold text-uppercase ltr-sp-05 mb-5">
+            <span>
+                <span class="btn-txt">{% trans "go to level three ?" %}</span>
+            </span>
+        </a>
+
+    </div>
+</main>
+{% endblock %}
+
+{% block footer %}
+    {% load static %}
+    {% load i18n %}
+
+{% trans "mins" as mins %}
+{% trans "secs" as secs %}
+{% trans "restart" as restart_btn %}
+<script>
+// cards array holds all cards
+let card = document.getElementsByClassName("card");
+let cards = [...card];
+
+// deck of all cards in game
+const deck = document.getElementById("card-deck");
+
+// declaring move variable
+let moves = 0;
+let counter = document.querySelector(".moves");
+
+// declare variables for star icons
+const stars = document.querySelectorAll(".fa-star");
+
+// declaring variable of matchedCards
+let matchedCard = document.getElementsByClassName("match");
+
+ // stars list
+ let starsList = document.querySelectorAll(".stars li");
+
+ // close icon in modal
+ let closeicon = document.querySelector(".close");
+
+ // declare modal
+ let modal = document.getElementById("popup1")
+
+ // array for opened cards
+var openedCards = [];
+
+// first game start on button click
+function firstGameStart() {
+    $('#start-button').html('<span><span class="btn-txt">{{restart_btn}}</span><span class="btn-icon"><i class="fas fa-redo"></i></span></span>')
+    startGame()
+    cards.forEach(function(t){displayCards(t)})
+}
+
+// show cards for 3 seconds
+var displayCards = function (elm){
+    elm.classList.toggle("open");
+    elm.classList.toggle("show");
+    elm.classList.toggle("disabled");
+    setTimeout(function(){
+        elm.classList.toggle("open");
+        elm.classList.toggle("show");
+        elm.classList.toggle("disabled");
+        resetGame()
+        startTimer(true)
+    },4000);
+};
+
+
+// @description shuffles cards
+// @param {array}
+// @returns shuffledarray
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+};
+
+
+// @description shuffles cards when page is refreshed / loads
+// document.body.onload = startGame();
+
+
+// @description function to start a new play 
+function startGame(){
+ 
+    // empty the openCards array
+    openedCards = [];
+
+    // shuffle deck
+    cards = shuffle(cards);
+    // remove all exisiting classes from each card
+    for (var i = 0; i < cards.length; i++){
+        deck.innerHTML = "";
+        [].forEach.call(cards, function(item) {
+            deck.appendChild(item);
+        });
+        cards[i].classList.remove("show", "open", "match", "disabled");
+    }
+}
+
+function resetGame() {
+    // reset moves
+    moves = 0;
+    counter.innerHTML = moves;
+    // reset rating
+    for (var i= 0; i < stars.length; i++){
+        stars[i].style.color = "#FFD700";
+        stars[i].style.visibility = "visible";
+    }
+    //reset timer
+    second = 0;
+    minute = 0; 
+    hour = 0;
+    var timer = document.querySelector(".timer");
+    timer.innerHTML = "0 {{mins}} 0 {{secs}}";
+    clearInterval(interval);
+}
+
+
+// @description toggles open and show class to display cards
+var displayCard = function (){
+    this.classList.toggle("open");
+    this.classList.toggle("show");
+    this.classList.toggle("disabled");
+};
+
+
+
+// @description add opened cards to OpenedCards list and check if cards are match or not
+function cardOpen() {
+    openedCards.push(this);
+    var len = openedCards.length;
+    if(len === 2){
+        moveCounter();
+        if(openedCards[0].type === openedCards[1].type){
+            matched(this);
+        } else {
+            unmatched();
+        }
+    }
+};
+
+
+// @description when cards match
+function matched(el){
+    let cardType = el.getAttribute("type");
+    openedCards[0].classList.add("match", "disabled");
+    openedCards[1].classList.add("match", "disabled");
+    deck.classList.add('match')
+    openedCards[0].classList.remove("show", "open", "no-event");
+    openedCards[1].classList.remove("show", "open", "no-event");
+    openedCards = [];
+    if (matchedCard.length >= 16) {
+        startTimer(false)
+        Swal.fire({
+            imageUrl: habitatsPopUps[cardType].imgUrl,
+            imageHeight: 250,
+            imageAlt: habitatsPopUps[cardType].name,
+            title: habitatsPopUps[cardType].name,
+            text: getRI(habitatsPopUps[cardType].about),
+            icon: 'sucess',
+        }).then((result) => {
+            if (result.value) {
+                Swal.fire({
+                    title: 'Congratulation!',
+                    text: 'now you can move to level three for more challanges or you can stay here and enjoy more with the habitats',
+                    imageUrl: getRI(avatarsUrls),
+                    imageHeight: 250,
+                    imageAlt: 'Congratulation image',
+                    confirmButtonText:'<a href="{% url "guess_the_habitat_three" %}" style="color:white;">Go to level three</a>',
+                    cancelButtonText:'Stay in level two',
+                    showCancelButton: true,
+                    confirmButtonColor:"#0aca0a",
+                    cancelButtonColor:"#ef9a1b",
+                    backdrop: `
+                        rgba(59, 186, 129, 0.79)
+                    `,
+                })
+            }
+        })
+        $('#level-two-button').fadeIn()
+        $('.level-two').click(function() {location.href = "{% url 'guess_the_habitat_three' %}"})
+    } else {
+        Swal.fire({
+            imageUrl: habitatsPopUps[cardType].imgUrl,
+            imageHeight: 250,
+            imageAlt: habitatsPopUps[cardType].name,
+            title: habitatsPopUps[cardType].name,
+            text: getRI(habitatsPopUps[cardType].about),
+            icon: 'sucess',
+        })
+    }
+
+    setTimeout(function(){
+        deck.classList.remove("match")
+    },1100);
+}
+
+
+// description when cards don't match
+function unmatched(){
+    openedCards[0].classList.add("unmatched");
+    openedCards[1].classList.add("unmatched");
+    deck.classList.add('unmatched')
+    disable();
+    setTimeout(function(){
+        openedCards[0].classList.remove("show", "open", "no-event","unmatched");
+        openedCards[1].classList.remove("show", "open", "no-event","unmatched");
+        deck.classList.remove("unmatched")
+        enable();
+        openedCards = [];
+    },1100);
+}
+
+
+// @description disable cards temporarily
+function disable(){
+    Array.prototype.filter.call(cards, function(card){
+        card.classList.add('disabled');
+    });
+}
+
+
+// @description enable cards and disable matched cards
+function enable(){
+    Array.prototype.filter.call(cards, function(card){
+        card.classList.remove('disabled');
+        for(var i = 0; i < matchedCard.length; i++){
+            matchedCard[i].classList.add("disabled");
+        }
+    });
+}
+
+
+// @description count player's moves
+function moveCounter(){
+    moves++;
+    counter.innerHTML = moves;
+    //start timer on first click
+    if(moves == 1){
+        // second = 0;
+        // minute = 0; 
+        // hour = 0;
+        // startTimer();
+    }
+    // setting rates based on moves
+    if (moves > 8 && moves < 12){
+        for( i= 0; i < 3; i++){
+            if(i > 1){
+                stars[i].style.visibility = "collapse";
+            }
+        }
+    }
+    else if (moves > 13){
+        for( i= 0; i < 3; i++){
+            if(i > 0){
+                stars[i].style.visibility = "collapse";
+            }
+        }
+    }
+}
+
+
+// @description game timer
+var second = 0, minute = 0; hour = 0;
+var timer = document.querySelector(".timer");
+var interval;
+function startTimer(state){
+    if (state) {
+        interval = setInterval(function(){
+            timer.innerHTML = minute+"{{mins}} "+second+"{{secs}}";
+            second++;
+            if(second == 60){
+                minute++;
+                second=0;
+            }
+            if(minute == 60){
+                hour++;
+                minute = 0;
+            }
+        },1000);
+    } else {
+        clearInterval(interval)
+    }
+}
+
+
+// @description congratulations when all cards match, show modal and moves, time and rating
+function congratulations(){
+    if (matchedCard.length == 16){
+        clearInterval(interval);
+        finalTime = timer.innerHTML;
+
+        // show congratulations modal
+        modal.classList.add("show");
+
+        // declare star rating variable
+        var starRating = document.querySelector(".stars").innerHTML;
+
+        //showing move, rating, time on modal
+        document.getElementById("finalMove").innerHTML = moves;
+        document.getElementById("starRating").innerHTML = starRating;
+        document.getElementById("totalTime").innerHTML = finalTime;
+
+        //closeicon on modal
+        closeModal();
+    };
+}
+
+
+// @description close icon on modal
+function closeModal(){
+    closeicon.addEventListener("click", function(e){
+        modal.classList.remove("show");
+        startGame();
+    });
+}
+
+
+// @desciption for user to play Again 
+function playAgain(){
+    modal.classList.remove("show");
+    startGame();
+}
+
+
+// loop to add event listeners to each card
+for (var i = 0; i < cards.length; i++){
+    card = cards[i];
+    card.addEventListener("click", displayCard);
+    card.addEventListener("click", cardOpen);
+    // card.addEventListener("click",congratulations);
+};
+
+var habitatsPopUps = {
+    deserts:{
+        name: '{% trans "Deserts" %}', 
+        imgUrl:"{% static 'img/games/deserts-real.jpg' %}", 
+        about:[
+            "{% trans 'I know the first thing that came to your mind was a boring dry place, right? Well, let me explain what a desert is. A desert is any large area with little to no rain.' %}",
+            "{% trans 'Some desserts are freezing cold! they are called the polar deserts.' %}",
+            "{% trans 'The largest hot desert is the Sahara and the larget coldest one is Antarctica!' %}",
+            "{% trans 'Camels live in hot deserts and polar bears live in cold deserts.' %}",
+        ]
+    },
+    forests:{
+        name: '{% trans "Forests" %}', 
+        imgUrl:"{% static 'img/games/forests-real.jpg' %}", 
+        about:[
+            "{% trans 'Have you ever been camping? Do you know where people usually camp? In forests of course!' %}",
+            "{% trans 'The largest forest on our planet is the Amazon Rainforest.' %}",
+            "{% trans 'Forests are very important because they are made up of trees and trees give us oxygen to breathe.' %}",
+            "{% trans 'Pandas live in bamboo forests while gorillas live in rain forests.' %}",
+        ]
+    },
+    grasslands:{
+        name: '{% trans "Grasslands" %}', 
+        imgUrl:"{% static 'img/games/grasslands-real.jpg' %}",
+        about:[
+            "{% trans 'This is a cows favorite place! and it is called a grassland, which is any large area filled with grass and short plants.' %}",
+            "{% trans 'Grasslands are perfect for growing wheat and corn. Yummy!' %}",
+            "{% trans 'Some snakes live in grasslands.' %}",
+        ]
+    },
+    mountain:{
+        name: '{% trans "Mountains" %}', 
+        imgUrl:"{% static 'img/games/mountain-real.jpg' %}", 
+        about:[
+            "{% trans 'Have you ever heard of Mount Everest? Its the tallest mountain on Earth!' %}",
+            "{% trans 'A mountain is a part of the ground that rises above everything else.' %}",
+            "{% trans 'The higher you will climb, the harder it is to breathe! because oxygen levels are low in mountains.' %}",
+            "{% trans 'Some of the animals that live in mountains are yaks and brown bears.' %}",
+        ]
+    },
+    polarRegions:{
+        name: '{% trans "Polar regions" %}', 
+        imgUrl:"{% static 'img/games/polar-regions-real.jpg' %}",
+        about:[
+            "{% trans 'Polar regions are the coldest regions of our planet!' %}",
+            "{% trans 'Polar regions are freezing cold and filled with snow and ice. That is why it is hard for humans to live there.' %}",
+            "{% trans 'Planet Earth has 2 polars: Antarctican and the Arctic.' %}",
+            "{% trans 'Penguins and some orcas live in polar regions.' %}",
+        ]
+    },
+    wetLands:{
+        name: '{% trans "Wet lands" %}', 
+        imgUrl:"{% static 'img/games/wet-lands-real.jpg' %}",
+        about:[
+            "{% trans 'This Magical habitat we always see in movies is called a wetland.' %}",
+            "{% trans 'Wetlands are lands where the ground is covered with shallow water.' %}",
+            "{% trans 'Some of the animals that live in wetlands are frogs and swans.' %}",
+            "{% trans 'There is a The World Wetland Day! It is on 2nd of February.' %}",
+        ]
+    },
+    island:{
+        name: '{% trans "Island" %}', 
+        imgUrl:"{% static 'img/games/island-real.jpg' %}",
+        about:[
+            "{% trans 'This is probably the best place to spend a vacation in! It is called an island.' %}",
+            "{% trans 'An island is a large land that is not connected to any other land and is surrounded by water from all sides.' %}",
+            "{% trans 'The biggest island on our planet is Greenland and the smallest island is Bishop Rock.' %}",
+            "{% trans 'Some of the animals that live on islands are flamingos and iguanas.' %}",
+        ]
+    },
+    ocean:{
+        name: '{% trans "Ocean" %}', 
+        imgUrl:"{% static 'img/games/ocean-real.jpg' %}",
+        about:[
+            "{% trans '71% of Earth is covered with water and this water is called the ocean.' %}",
+            "{% trans 'Did you know that the oceans of our planet are so deep that only 5% of them have been discovered?' %}",
+            "{% trans 'The largest ocean is called the pacific ocean.' %}",
+            "{% trans 'Manta Rays and octuposes live in the ocean.' %}",
+        ]
+    },
+};
+
+
+Swal.fire({
+    imageUrl: getRI(avatarsUrls),
+    imageHeight: 250,
+    imageAlt: 'child avatar image',
+    title: '{% trans "Level two" %}',
+    text: "{% trans 'Wow that was fast! Now match the identical habitats together.'  %}",
+})
+</script>
+{% endblock %}
